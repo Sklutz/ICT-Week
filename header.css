@@ -1,0 +1,548 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  
+}
+
+.logo{
+  font-size: 1.7rem;
+  color: #970a58;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+.navbar a{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 7px;
+  margin-left: 4rem;
+  font-size: 1.7rem;
+  transition: .2s;
+}
+
+.navbar a:hover, .navbar a:active{
+  background: #970a58;
+  color:#fff;
+}
+
+.all-heading{
+  display: flex;
+  font-size: 60px;
+  color: #970a58;
+  text-shadow: 0 0 5px #ff66ff, 0 0 10px #ff66ff, 0 0 15px #ff66ff, 0 0 20px #ff66ff, 0 0 25px #ff66ff, 0 0 30px #ff66ff, 0 0 35px #ff66ff;
+  animation: glow 1s ease-in-out infinite alternate;
+  text-align: left;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff66ff, 0 0 10px #ff66ff, 0 0 15px #ff66ff, 0 0 20px #ff66ff, 0 0 25px #ff66ff, 0 0 30px #ff66ff, 0 0 35px #ff66ff;
+  }
+  to {
+    text-shadow: 0 0 10px #ff66ff, 0 0 20px #ff66ff, 0 0 30px #ff66ff, 0 0 40px #ff66ff, 0 0 50px #ff66ff, 0 0 60px #ff66ff, 0 0 70px #ff66ff;
+  }
+}
+
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.banner video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+  .banner video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+#about{
+  background-image: url('./thumbnail/astronaut-surfing-nebula_777271-2178.avif');
+  background-image: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+  .contact-form video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.contact{
+  background: #970a58;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  grid-gap: 6rem;
+}
+
+.contact-img img{
+  max-width: 100%;
+  width: 720px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-form h1{
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+span{
+  color: #970a58;
+}
+
+.contact-form p{
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 1.1rem;
+  margin-bottom: 3.8rem;
+}
+
+
+.banner{
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  transition: 2s ease;
+}
+
+.contact-form form{
+  position: relative;
+}
+
+.contact-form form input,
+form textarea{
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background:#4b4b44;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+}
+
+.contact-form textarea{
+  resize: none;
+  height: 200px;
+}
+
+.contact-form form .btn{
+  display: inline-block;
+  background: #970a58;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: 220px;
+  transition: ease .20s;
+  cursor: pointer;
+}
+
+.contact-form form .btn:hover{
+  border: 2px solid #970a58;
+  background: transparent;
+  transform: scale(1.1);
+  
+}
+
+@media (max-width: 1570px){
+  section{
+    padding: 80px 3%;
+    transition: .2s;
+  }
+  .contact-form h1{
+    font-size: 60px;
+  }
+  .contact-form form p{
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 1090px){
+  .contact{
+    grid-gap: 2rem;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 1000px){
+  .contact{
+    grid-template-columns: 1fr;
+    transition: .3s;
+  }
+  .contact-form{
+    order: 2;
+  }
+  .contact-img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-form video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+  .contact-form video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.banner .glass-wrapper{
+  width: 30%;
+  height: 100%;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.hero-title{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-top: 13rem;
+}
+
+.hero-title p{
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 60px;
+  color: #fff;
+}
+
+.hero-title .country{
+  font-size: 85px;
+  letter-spacing: 3px; 
+}
+
+.hero-title .details{
+  width: 60%;
+  padding-top: 1.5rem;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  padding-bottom: 2.5rem;
+}
+
+.hero-title .explore button{
+  
+  background: rgba( 153, 63, 114, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: none;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 15px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.tourist-list {
+  bottom: 25px;
+  position: absolute;
+  left: 35rem;
+}
+
+.tourist-list p{
+  color: white;
+  padding-left: 20px;
+  margin-bottom: auto;
+  line-height: 24px;
+}
+
+.tourist-list ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  width: 65vw;
+  height: 15rem;
+  align-items: center;
+}
+
+.tourist-list .thumbnail {
+  display: flex;
+  height: 10rem;
+  width: 18rem;
+  background-size: cover !important;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.tourist-list .thumbnail .details{
+  margin-top: auto;
+  padding: 10px 0px;
+  background: rgba( 153, 63, 114, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.details .place-name{
+  font-size: 24px;
+  font-weight: 600;
+  
+}
+
+.details .name{
+  font-weight: 300;
+  
+}
+
+.tourist-list .active{
+  margin-top: -5rem;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-box-one {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-box-two {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-box-three {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-box-one:hover,
+.project-box-one:focus {
+  transform: scale(1.1);
+}
+
+.project-box-two:hover,
+.project-box-two:focus {
+  transform: scale(1.1);
+}
+
+.project-box-three:hover,
+.project-box-three:focus {
+  transform: scale(1.1);
+}
+
+.project-box-one img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project-box-two img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project-box-three img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-box-one:hover .info,
+.project-box-one:focus .info {
+  opacity: 1;
+}
+
+.project-box-two:hover .info,
+.project-box-two:focus .info {
+  opacity: 1;
+}
+
+.project-box-three:hover .info,
+.project-box-three:focus .info {
+  opacity: 1;
+}
+
+.info-content {
+  text-align: center;
+  padding: 10px;
+  color: black;
+}
+
+.aboutbold1 {
+  color: black;
+}
+
+.about2-full {
+  width: 300px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  background-image: url('about2.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover; /* Cover the entire background area while preserving aspect ratio */
+  background-position: center; /* Center the background image */
+}
+
+.h2about {
+  margin-right: 50px !important;
+}
+
+.h2skills {
+  margin-right: 50px !important;
+}
+
+.h2project {
+  margin-right: 50px !important;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 100px;
+  transition: 1.5s;
+  font-size: 17px;
+}
+
+.box:hover{
+  width: 500px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+p.ex1 {
+  display: none;
+}
+
+.box:hover p.ex1 {
+  display: block;
+  padding: 10px;
+  transition-delay: 1s;
+}
+
+p.ex2 {
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+}
+
+p.ex3 {
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  font-size: 13px;
+}
